@@ -64,7 +64,7 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
 
 ---
 
-## 🚀 3. Nguồn dữ liệu từ điển.
+## 📝 3. Nguồn dữ liệu từ điển.
 Ứng dụng sử dụng các nguồn dữ liệu mở và đáng tin cậy:
 - **EDICT:** bộ từ điển Anh–Việt mở.  
 - **WordNet (Princeton):** cơ sở dữ liệu ngôn ngữ tiếng Anh. 
@@ -74,7 +74,7 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
 ---
 ### [Khoá 16](./docs/projects/K16/README.md)
 
-## 📝 4. Giao thức mạng
+## 🚀4. Giao thức mạng
 Hệ thống lựa chọn **TCP Socket** với mục đích:
 - Đảm bảo dữ liệu chính xác (tra từ phải **đúng tuyệt đối**).  
 - Dễ lập trình với **Java Socket / ServerSocket**.  
