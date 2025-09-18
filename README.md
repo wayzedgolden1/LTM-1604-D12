@@ -19,7 +19,7 @@
 
 </div>
 <h2 align="center">
-   Ứng dụng hỗ trợ tra cứu song ngữ Anh ↔ Việt. 
+   Ứng dụng hỗ trợ tra cứu song ngữ Anh-Việt. 
 </h2>
 
 
@@ -34,7 +34,7 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
 
 ### 🖥️ Giao diện.
 - 2 ô nhập/xuất để hiển thị từ gốc và nghĩa dịch.  
-- Nút chuyển đổi **Anh ↔ Việt** chỉ bằng một lần nhấn.  
+- Nút chuyển đổi **Anh-Việt** chỉ bằng một lần nhấn.  
 - Thiết kế gọn gàng, dễ nhìn và trực quan.  
 
 ### ⚡ Các tính năng nổi bật.
@@ -74,7 +74,6 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
 > Bộ dữ liệu ngôn ngữ (WordNet/EDICT) được chuẩn hóa và nạp vào cơ sở dữ liệu SQL, sau đó hệ thống truy vấn SQL để cung cấp cho AI khả năng tra cứu, phân tích và xử lý ngôn ngữ.
 
 ---
-### [Khoá 16](./docs/projects/K16/README.md)
 
 ## 🚀4. Giao thức mạng
 Hệ thống lựa chọn **TCP Socket** với mục đích:
