@@ -19,17 +19,68 @@
 
 </div>
 
-## 📖 1. Giới thiệu
-Học phần trang bị cho người học những kiến thức nền tảng của lập trình mạng và các kỹ năng cần thiết để thiết kế và cài đặt các ứng dụng mạng và các chuẩn ở mức ứng dụng dựa trên mô hình Client/Server, có sử dụng các giao tiếp chương trình dựa trên Sockets. Kết thúc học phần, sinh viên có thể viết các chương trình ứng dụng mạng với giao thức tầng ứng dụng tự thiết kế.
+## 📖 1. Giới thiệu 
+Ứng dụng được xây dựng theo mô hình **Client–Server**, với các đặc điểm chính:
+- **Giao diện:** phát triển bằng **Java Swing**.  
+- **Mạng:** trao đổi dữ liệu thông qua **TCP Socket**.  
+- **Dữ liệu:** lưu trữ tập trung tại **Server** dưới dạng **SQL Database** (có thể mở rộng thêm CSV/JSON).  
+
+Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ điển **nhanh chóng, chính xác và thân thiện**, tương tự như Google Dịch nhưng gọn nhẹ hơn.
+
+---
+Ứng dụng hỗ trợ **tra cứu song ngữ (Anh ↔ Việt)** với giao diện trực quan, dễ sử dụng.  
+
+### 🖥️ Giao diện
+- 2 ô nhập/xuất để hiển thị từ gốc và nghĩa dịch.  
+- Nút chuyển đổi **Anh ↔ Việt** chỉ bằng một lần nhấn.  
+- Thiết kế gọn gàng, dễ nhìn và trực quan.  
+
+### ⚡ Các tính năng nổi bật
+- **Tra cứu song ngữ:**  
+  - Hỗ trợ cả chế độ Anh→Việt và Việt→Anh.  
+  - Kết quả có thể bao gồm **nhiều nghĩa** và ghi rõ **nguồn tham khảo**.  
+
+- **Gợi ý từ gần đúng / sửa lỗi chính tả:**  
+  - Ví dụ: người dùng nhập `enviroment` → hệ thống gợi ý `environment`.  
+  - Áp dụng thuật toán **Levenshtein Distance** hoặc tích hợp **AI NLP**.  
+
+- **Ví dụ ngữ cảnh thực tế:**  
+  - Mỗi từ vựng có thể kèm theo ví dụ câu (song ngữ nếu có).  
+  - Dữ liệu tham khảo từ **StarDict, Wiktionary, Vdict** hoặc các bộ dữ liệu phụ.  
+
+- **Lịch sử tra cứu:**  
+  - Server lưu log các truy vấn để hỗ trợ phân tích và mở rộng.  
+  - Có thể gắn **User ID** nếu cần quản lý người dùng.  
+
+- **Phát âm & luyện nói (nâng cao):**  
+  - **Phát âm:** Server trả file audio (TTS) hoặc URL → Client phát bằng Java Sound.  
+  - **Luyện nói:** Client ghi âm giọng đọc → gửi lên Server để so sánh bằng **Speech-to-Text** hoặc API chấm điểm phát âm.  
+
+---
+
 
 ## 🔧 2. Ngôn ngữ lập trình sử dụng: [![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/)
 
-## 🚀 3. Các project đã thực hiện
+## 🚀 3. Nguồn dữ liệu từ điển
+Ứng dụng sử dụng các nguồn dữ liệu mở và đáng tin cậy:
+- **EDICT:** bộ từ điển Anh–Việt mở.  
+- **WordNet (Princeton):** cơ sở dữ liệu ngôn ngữ tiếng Anh.  
+- Các bộ dữ liệu **CSV/JSON miễn phí** từ GitHub (có thể tải về để mở rộng).  
 
+> Dữ liệu có thể được **load vào RAM** trên Server để tối ưu tốc độ tra cứu.
+
+---
 ### [Khoá 16](./docs/projects/K16/README.md)
 
-## 📝 4. License
+## 📝 4. Giao thức mạng
+Hệ thống lựa chọn **TCP Socket** thay vì UDP hay RMI vì:
+- Đảm bảo dữ liệu chính xác (tra từ phải **đúng tuyệt đối**).  
+- Dễ lập trình với **Java Socket / ServerSocket**.  
+- Ổn định cho mô hình **Client–Server**.  
 
-© 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
+### 🔗 Quy trình hoạt động
+1. Client nhập từ cần tra → gửi từ khóa đến Server qua TCP socket.  
+2. Server nhận dữ liệu → tra cứu trong CSDL/file → trả kết quả.  
+3. Client nhận và hiển thị kết quả trên GUI.  
 
 ---
