@@ -18,15 +18,12 @@
 [![DaiNam University](https://img.shields.io/badge/DaiNam%20University-orange?style=for-the-badge)](https://dainam.edu.vn)
 
 </div>
-<p align="center">
-  <a>
-    ## Ứng dụng hỗ trợ **tra cứu song ngữ (Anh ↔ Việt)**. 
-  </a> 
-</p>
+<h2 align="center">
+   ## Ứng dụng hỗ trợ **tra cứu song ngữ (Anh ↔ Việt)**. 
+</h2>
+
 
 ## 📖 1. Giới thiệu.
-
-
 
 Ứng dụng được xây dựng theo mô hình **Client–Server**, với các đặc điểm chính:
 - **Giao diện:** phát triển bằng **Java Swing**.  
