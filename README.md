@@ -19,7 +19,10 @@
 
 </div>
 
-## 📖 1. Giới thiệu 
+## 📖 1. Giới thiệu.
+
+## Ứng dụng hỗ trợ **tra cứu song ngữ (Anh ↔ Việt)** với giao diện trực quan, dễ sử dụng. 
+
 Ứng dụng được xây dựng theo mô hình **Client–Server**, với các đặc điểm chính:
 - **Giao diện:** phát triển bằng **Java Swing**.  
 - **Mạng:** trao đổi dữ liệu thông qua **TCP Socket**.  
@@ -27,15 +30,12 @@
 
 Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ điển **nhanh chóng, chính xác và thân thiện**, tương tự như Google Dịch nhưng gọn nhẹ hơn.
 
----
-Ứng dụng hỗ trợ **tra cứu song ngữ (Anh ↔ Việt)** với giao diện trực quan, dễ sử dụng. 
-
-### 🖥️ Giao diện
+### 🖥️ Giao diện.
 - 2 ô nhập/xuất để hiển thị từ gốc và nghĩa dịch.  
 - Nút chuyển đổi **Anh ↔ Việt** chỉ bằng một lần nhấn.  
 - Thiết kế gọn gàng, dễ nhìn và trực quan.  
 
-### ⚡ Các tính năng nổi bật
+### ⚡ Các tính năng nổi bật.
 - **Tra cứu song ngữ:**  
   - Hỗ trợ cả chế độ Anh→Việt và Việt→Anh.  
   - Kết quả có thể bao gồm **nhiều nghĩa** và ghi rõ **nguồn tham khảo**.  
@@ -59,12 +59,12 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
 ---
 
 
-## 🔧 2. Ngôn ngữ lập trình sử dụng:  
+## 🔧 2. Ngôn ngữ lập trình sử dụng. 
 [![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/) 
 [![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 
 
-## 🚀 3. Nguồn dữ liệu từ điển
+## 🚀 3. Nguồn dữ liệu từ điển.
 Ứng dụng sử dụng các nguồn dữ liệu mở và đáng tin cậy:
 - **EDICT:** bộ từ điển Anh–Việt mở.  
 - **WordNet (Princeton):** cơ sở dữ liệu ngôn ngữ tiếng Anh. 
