@@ -21,7 +21,7 @@
 
 ## 📖 1. Giới thiệu.
 
-## Ứng dụng hỗ trợ **tra cứu song ngữ (Anh ↔ Việt)** với giao diện trực quan, dễ sử dụng. 
+## Ứng dụng hỗ trợ **tra cứu song ngữ (Anh ↔ Việt)**. 
 
 Ứng dụng được xây dựng theo mô hình **Client–Server**, với các đặc điểm chính:
 - **Giao diện:** phát triển bằng **Java Swing**.  
@@ -58,11 +58,11 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
 
 ---
 
-
 ## 🔧 2. Ngôn ngữ lập trình sử dụng. 
 [![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/) 
 [![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 
+---
 
 ## 🚀 3. Nguồn dữ liệu từ điển.
 Ứng dụng sử dụng các nguồn dữ liệu mở và đáng tin cậy:
@@ -82,7 +82,7 @@ Hệ thống lựa chọn **TCP Socket** với mục đích:
 
 ### 🔗 Quy trình hoạt động
 1. Client nhập từ cần tra → gửi từ khóa đến Server qua TCP socket.  
-2. Server nhận dữ liệu → tra cứu trong CSDL/file → trả kết quả.  
+2. Server nhận dữ liệu → tra cứu trong cơ sở dữ liệu SQL → trả kết quả.  
 3. Client nhận và hiển thị kết quả trên GUI.  
 
 ---
