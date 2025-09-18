@@ -23,7 +23,7 @@
 Ứng dụng được xây dựng theo mô hình **Client–Server**, với các đặc điểm chính:
 - **Giao diện:** phát triển bằng **Java Swing**.  
 - **Mạng:** trao đổi dữ liệu thông qua **TCP Socket**.  
-- **Dữ liệu:** lưu trữ tập trung tại **Server** dưới dạng **SQL Database** (có thể mở rộng thêm CSV/JSON).  
+- **Dữ liệu:** lưu trữ tập trung tại **Server** dưới dạng **SQL Database**.  
 
 Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ điển **nhanh chóng, chính xác và thân thiện**, tương tự như Google Dịch nhưng gọn nhẹ hơn.
 
@@ -42,7 +42,7 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
 
 - **Gợi ý từ gần đúng / sửa lỗi chính tả:**  
   - Ví dụ: người dùng nhập `enviroment` → hệ thống gợi ý `environment`.  
-  - Áp dụng thuật toán **Levenshtein Distance** hoặc tích hợp **AI NLP**.  
+  - Áp dụng thuật toán **Levenshtein Distance** và tích hợp **AI NLP**.  
 
 - **Ví dụ ngữ cảnh thực tế:**  
   - Mỗi từ vựng có thể kèm theo ví dụ câu (song ngữ nếu có).  
@@ -53,7 +53,7 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
   - Có thể gắn **User ID** nếu cần quản lý người dùng.  
 
 - **Phát âm & luyện nói (nâng cao):**  
-  - **Phát âm:** Server trả file audio (TTS) hoặc URL → Client phát bằng Java Sound.  
+  - **Phát âm:** Server trả file audio (TTS) → Client phát bằng Java Sound.  
   - **Luyện nói:** Client ghi âm giọng đọc → gửi lên Server để so sánh bằng **Speech-to-Text** hoặc API chấm điểm phát âm.  
 
 ---
@@ -67,16 +67,15 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
 ## 🚀 3. Nguồn dữ liệu từ điển
 Ứng dụng sử dụng các nguồn dữ liệu mở và đáng tin cậy:
 - **EDICT:** bộ từ điển Anh–Việt mở.  
-- **WordNet (Princeton):** cơ sở dữ liệu ngôn ngữ tiếng Anh.  
-- Các bộ dữ liệu **CSV/JSON miễn phí** từ GitHub (có thể tải về để mở rộng).  
+- **WordNet (Princeton):** cơ sở dữ liệu ngôn ngữ tiếng Anh. 
 
-> Dữ liệu có thể được **load vào RAM** trên Server để tối ưu tốc độ tra cứu.
+> Bộ dữ liệu ngôn ngữ (WordNet/EDICT) được chuẩn hóa và nạp vào cơ sở dữ liệu SQL, sau đó hệ thống truy vấn SQL để cung cấp cho AI khả năng tra cứu, phân tích và xử lý ngôn ngữ.
 
 ---
 ### [Khoá 16](./docs/projects/K16/README.md)
 
 ## 📝 4. Giao thức mạng
-Hệ thống lựa chọn **TCP Socket** thay vì UDP hay RMI vì:
+Hệ thống lựa chọn **TCP Socket** với mục đích:
 - Đảm bảo dữ liệu chính xác (tra từ phải **đúng tuyệt đối**).  
 - Dễ lập trình với **Java Socket / ServerSocket**.  
 - Ổn định cho mô hình **Client–Server**.  
