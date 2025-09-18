@@ -4,7 +4,8 @@
     </a>
 </h2>
 <h2 align="center">
-   NETWORK PROGRAMMING
+   Ứng dụng hỗ trợ tra cứu song ngữ Anh-Việt. 
+</h2>
 </h2>
 <div align="center">
     <p align="center">
@@ -18,10 +19,6 @@
 [![DaiNam University](https://img.shields.io/badge/DaiNam%20University-orange?style=for-the-badge)](https://dainam.edu.vn)
 
 </div>
-<h2 align="center">
-   Ứng dụng hỗ trợ tra cứu song ngữ Anh-Việt. 
-</h2>
-
 
 ## 📖 1. Giới thiệu.
 
