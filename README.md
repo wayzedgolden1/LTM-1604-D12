@@ -19,7 +19,7 @@
 
 </div>
 <h2 align="center">
-   ## Ứng dụng hỗ trợ **tra cứu song ngữ (Anh ↔ Việt)**. 
+   Ứng dụng hỗ trợ tra cứu song ngữ Anh ↔ Việt. 
 </h2>
 
 
