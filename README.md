@@ -58,7 +58,7 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
 
 ---
 
-## 🔧 2. Ngôn ngữ lập trình sử dụng. 
+## 🔧 2. Công nghệ sử dụng. 
 [![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/) 
 [![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 
