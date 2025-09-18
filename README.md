@@ -28,7 +28,7 @@
 Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ điển **nhanh chóng, chính xác và thân thiện**, tương tự như Google Dịch nhưng gọn nhẹ hơn.
 
 ---
-Ứng dụng hỗ trợ **tra cứu song ngữ (Anh ↔ Việt)** với giao diện trực quan, dễ sử dụng.  
+Ứng dụng hỗ trợ **tra cứu song ngữ (Anh ↔ Việt)** với giao diện trực quan, dễ sử dụng. 
 
 ### 🖥️ Giao diện
 - 2 ô nhập/xuất để hiển thị từ gốc và nghĩa dịch.  
