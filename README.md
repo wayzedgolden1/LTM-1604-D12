@@ -79,7 +79,7 @@ Hệ thống lựa chọn **TCP Socket** với mục đích:
 
 ## 🖼️ 3. Hình ảnh hệ thống.
 <p align="center">
-        <img src="docs/UI.png" alt="AIoTLab Logo" width="170"/>
+        <img src="docs/UI.png" alt="AIoTLab Logo" width="340"/>
 </p>
 
 ---
@@ -94,7 +94,7 @@ Hệ thống lựa chọn **TCP Socket** với mục đích:
 
 ---
 
-## 📩 Liên hệ.
-👤 Họ và tên: NGUYỄN TIẾN ĐẠT.
-🎓 Khoa: Công nghệ Thông tin – Đại học Đại Nam.
-📧 Email: wayzedgolden@gmail.com
+## 📩 5. Liên hệ.
+- 👤 Họ và tên: NGUYỄN TIẾN ĐẠT.
+- 🎓 Khoa: Công nghệ Thông tin – Đại học Đại Nam.
+- 📧 Email: wayzedgolden@gmail.com
