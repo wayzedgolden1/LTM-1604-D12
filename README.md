@@ -4,7 +4,7 @@
     </a>
 </h2>
 <h2 align="center">
-   Ứng dụng hỗ trợ tra cứu song ngữ Anh-Việt. 
+   ỨNG DỤNG HỖ TRỢ TRA CỨU SONG NGỮ ANH-VIỆT. 
 </h2>
 </h2>
 <div align="center">
@@ -20,6 +20,8 @@
 
 </div>
 
+---
+
 ## 📖 1. Giới thiệu.
 
 Ứng dụng được xây dựng theo mô hình **Client–Server**, với các đặc điểm chính:
@@ -28,11 +30,6 @@
 - **Dữ liệu:** lưu trữ tập trung tại **Server** dưới dạng **SQL Database**.  
 
 Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ điển **nhanh chóng, chính xác và thân thiện**, tương tự như Google Dịch nhưng gọn nhẹ hơn.
-
-### 🖥️ Giao diện.
-- 2 ô nhập/xuất để hiển thị từ gốc và nghĩa dịch.  
-- Nút chuyển đổi **Anh-Việt** chỉ bằng một lần nhấn.  
-- Thiết kế gọn gàng, dễ nhìn và trực quan.  
 
 ### ⚡ Các tính năng nổi bật.
 - **Tra cứu song ngữ:**  
@@ -55,24 +52,14 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
   - **Phát âm:** Server trả file audio (TTS) → Client phát bằng Java Sound.  
   - **Luyện nói:** Client ghi âm giọng đọc → gửi lên Server để so sánh bằng **Speech-to-Text** hoặc API chấm điểm phát âm.  
 
----
-
-## 🔧 2. Công nghệ sử dụng. 
-[![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/) 
-[![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-
----
-
-## 📝 3. Nguồn dữ liệu từ điển.
+### 📝 Nguồn dữ liệu từ điển.
 Ứng dụng sử dụng các nguồn dữ liệu mở và đáng tin cậy:
 - **EDICT:** bộ từ điển Anh–Việt mở.  
 - **WordNet (Princeton):** cơ sở dữ liệu ngôn ngữ tiếng Anh. 
 
 > Bộ dữ liệu ngôn ngữ (WordNet/EDICT) được chuẩn hóa và nạp vào cơ sở dữ liệu SQL, sau đó hệ thống truy vấn SQL để cung cấp cho AI khả năng tra cứu, phân tích và xử lý ngôn ngữ.
 
----
-
-## 🚀4. Giao thức mạng
+### 🚀 Giao thức mạng
 Hệ thống lựa chọn **TCP Socket** với mục đích:
 - Đảm bảo dữ liệu chính xác (tra từ phải **đúng tuyệt đối**).  
 - Dễ lập trình với **Java Socket / ServerSocket**.  
@@ -82,5 +69,32 @@ Hệ thống lựa chọn **TCP Socket** với mục đích:
 1. Client nhập từ cần tra → gửi từ khóa đến Server qua TCP socket.  
 2. Server nhận dữ liệu → tra cứu trong cơ sở dữ liệu SQL → trả kết quả.  
 3. Client nhận và hiển thị kết quả trên GUI.  
+---
+
+## 🔧 2. Công nghệ sử dụng. 
+[![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/) 
+[![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 
 ---
+
+## 🖼️ 3. Hình ảnh hệ thống.
+<p align="center">
+        <img src="docs/UI.png" alt="AIoTLab Logo" width="170"/>
+</p>
+
+---
+
+## ⚙️ 4. Các bước cài đặt.
+1. **Cài JDK** (phiên bản 17+ hoặc JDK 21).  
+2. **Cài IDE** để lập trình Java (Eclipse / IntelliJ IDEA / NetBeans).  
+3. **Clone project:**
+   ```bash
+   git clone https://github.com/wayzedgolden1/LTM-1604-D12.git
+   cd LTM-1604-D12
+
+---
+
+## 📩 Liên hệ.
+👤 Họ và tên: NGUYỄN TIẾN ĐẠT
+🎓 Khoa: Công nghệ Thông tin – Đại học Đại Nam
+📧 Email: wayzedgolden@gmail.com
