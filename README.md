@@ -79,7 +79,7 @@ Hệ thống lựa chọn **TCP Socket** với mục đích:
 
 ## 🖼️ 3. Hình ảnh hệ thống.
 <p align="center">
-        <img src="docs/UI.png" alt="AIoTLab Logo" width="340"/>
+        <img src="docs/UI.png" alt="AIoTLab Logo" width="680"/>
 </p>
 
 ---
