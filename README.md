@@ -57,7 +57,7 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
 - **EDICT:** bộ từ điển Anh–Việt mở.  
 - **WordNet (Princeton):** cơ sở dữ liệu ngôn ngữ tiếng Anh. 
 
-> Bộ dữ liệu ngôn ngữ (WordNet/EDICT) được chuẩn hóa và nạp vào cơ sở dữ liệu SQL, sau đó hệ thống truy vấn SQL để cung cấp cho AI khả năng tra cứu, phân tích và xử lý ngôn ngữ.
+Bộ dữ liệu ngôn ngữ được chuẩn hóa và nạp vào cơ sở dữ liệu SQL, sau đó hệ thống truy vấn SQL để cung cấp cho AI khả năng tra cứu, phân tích và xử lý ngôn ngữ.
 
 ### 🚀 Giao thức mạng
 Hệ thống lựa chọn **TCP Socket** với mục đích:
@@ -95,6 +95,6 @@ Hệ thống lựa chọn **TCP Socket** với mục đích:
 ---
 
 ## 📩 Liên hệ.
-👤 Họ và tên: NGUYỄN TIẾN ĐẠT
-🎓 Khoa: Công nghệ Thông tin – Đại học Đại Nam
+👤 Họ và tên: NGUYỄN TIẾN ĐẠT.
+🎓 Khoa: Công nghệ Thông tin – Đại học Đại Nam.
 📧 Email: wayzedgolden@gmail.com
