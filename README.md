@@ -33,12 +33,8 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
 
 ### ⚡ Các tính năng nổi bật.
 - **Tra cứu song ngữ:**  
-  - Hỗ trợ cả chế độ Anh→Việt và Việt→Anh.  
+  - Hỗ trợ cả chế độ Anh→Việt.  
   - Kết quả có thể bao gồm **nhiều nghĩa** và ghi rõ **nguồn tham khảo**.  
-
-- **Gợi ý từ gần đúng / sửa lỗi chính tả:**  
-  - Ví dụ: người dùng nhập `enviroment` → hệ thống gợi ý `environment`.  
-  - Áp dụng thuật toán **Levenshtein Distance** và tích hợp **AI NLP**.  
 
 - **Ví dụ ngữ cảnh thực tế:**  
   - Mỗi từ vựng có thể kèm theo ví dụ câu (song ngữ nếu có).  
@@ -48,16 +44,6 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
   - Server lưu log các truy vấn để hỗ trợ phân tích và mở rộng.  
   - Có thể gắn **User ID** nếu cần quản lý người dùng.  
 
-- **Phát âm & luyện nói (nâng cao):**  
-  - **Phát âm:** Server trả file audio (TTS) → Client phát bằng Java Sound.  
-  - **Luyện nói:** Client ghi âm giọng đọc → gửi lên Server để so sánh bằng **Speech-to-Text** hoặc API chấm điểm phát âm.  
-
-### 📝 Nguồn dữ liệu từ điển.
-Ứng dụng sử dụng các nguồn dữ liệu mở và đáng tin cậy:
-- **EDICT:** bộ từ điển Anh–Việt mở.  
-- **WordNet (Princeton):** cơ sở dữ liệu ngôn ngữ tiếng Anh. 
-
-Bộ dữ liệu ngôn ngữ được chuẩn hóa và nạp vào cơ sở dữ liệu SQL, sau đó hệ thống truy vấn SQL để cung cấp cho AI khả năng tra cứu, phân tích và xử lý ngôn ngữ.
 
 ### 🚀 Giao thức mạng
 Hệ thống lựa chọn **TCP Socket** với mục đích:
@@ -78,19 +64,85 @@ Hệ thống lựa chọn **TCP Socket** với mục đích:
 ---
 
 ## 🖼️ 3. Hình ảnh hệ thống.
+<h2 align="center">
+   Giao diện người dùng.
+</h2>
 <p align="center">
         <img src="docs/UI.png" alt="AIoTLab Logo" width="680"/>
+</p>
+<h2 align="center">
+   Giao diện dịch.
+<p align="center">
+        <img src="docs/UI2.png" alt="AIoTLab Logo" width="680"/>
+</p>
+<h2 align="center">
+   Giao diện lịch sủ.
+</h2>
+<p align="center">
+        <img src="docs/UI3.png" alt="AIoTLab Logo" width="680"/>
+</p>
+<h2 align="center">
+   Giao diện ví dụ.
+</h2>
+<p align="center">
+        <img src="docs/UI4.png" alt="AIoTLab Logo" width="680"/>
 </p>
 
 ---
 
 ## ⚙️ 4. Các bước cài đặt.
-1. **Cài JDK** (phiên bản 17+ hoặc JDK 21).  
-2. **Cài IDE** để lập trình Java (Eclipse / IntelliJ IDEA / NetBeans).  
-3. **Clone project:**
-   ```bash
-   git clone https://github.com/wayzedgolden1/LTM-1604-D12.git
-   cd LTM-1604-D12
+
+## Yêu cầu hệ thống
+
+- Java JDK 8 trở lên
+- SQL Server 2019/2017/2016
+- Eclipse hoặc IDE Java tương thích
+- Thư viện JDBC SQL Server (`mssql-jdbc-13.2.0.jre8.jar`)
+
+## Bước 1: Thiết lập cơ sở dữ liệu
+
+1. Mở SQL Server Management Studio (SSMS).
+2. Chạy file `setup_database.sql` để tạo database và bảng mẫu.
+3. Kiểm tra các bảng:
+   - `EV_Dictionary` (English → Vietnamese)
+   - `UserLog` (lưu lịch sử tra cứu)
+4. Nếu muốn đổi tên user/password, cập nhật trong `config.properties`.
+
+## Bước 2: Cấu hình dự án trong Eclipse
+
+1. Mở Eclipse → File → Import → Existing Projects into Workspace.
+2. Chọn thư mục chứa `src/`.
+3. Thêm thư viện JDBC:
+   - Click phải vào dự án → Build Path → Configure Build Path → Libraries → Add External JAR
+   - Chọn `lib/mssql-jdbc-13.2.0.jre8.jar`.
+4. Đảm bảo `src` được build → không có lỗi.
+
+## Bước 3: Chạy Server
+
+1. Mở `DictionaryServer.java`.
+2. Run → Server sẽ lắng nghe trên port 5000.
+3. Kiểm tra log console, đảm bảo kết nối tới DB thành công.
+
+## Bước 4: Chạy Client
+
+1. Mở `DictionaryClient.java`.
+2. Run → GUI hiện ra.
+3. Nhập từ khóa → nhấn **Dịch** → kết quả hiển thị trong bảng.
+4. Lịch sử tra cứu được lưu tự động.
+
+## Bước 5: Cấu hình thêm
+
+- Đổi port server: chỉnh trong `DictionaryServer.java` và `DictionaryClient.java`.
+- Thêm từ mới / xóa từ: dùng chức năng trong GUI.
+- Nếu dùng AI API (Gemini / GPT) cần cài API key trong `config.properties`.
+
+## Lưu ý
+
+- Đảm bảo SQL Server đang chạy và port TCP 1433 mở.
+- Nếu gặp lỗi JDBC SSL: thêm `encrypt=false;trustServerCertificate=true` trong chuỗi kết nối.
+- Không commit file chứa mật khẩu thật lên GitHub.
+
+
 
 ---
 
