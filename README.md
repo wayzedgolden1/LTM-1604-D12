@@ -102,7 +102,7 @@ Hệ thống lựa chọn **TCP Socket** với mục đích:
 ## Bước 1: Thiết lập cơ sở dữ liệu
 
 1. Mở SQL Server Management Studio (SSMS).
-2. Chạy file `setup_database.sql` để tạo database và bảng mẫu.
+2. New Query rồi copy file `setup_database.txt` vào để tạo database và bảng mẫu.
 3. Kiểm tra các bảng:
    - `EV_Dictionary` (English → Vietnamese)
    - `UserLog` (lưu lịch sử tra cứu)
