@@ -1,0 +1,39 @@
+-- Xóa database cũ nếu có
+IF EXISTS (SELECT * FROM sys.databases WHERE name = 'DictionaryDB')
+BEGIN
+    ALTER DATABASE DictionaryDB SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE DictionaryDB;
+END
+GO
+
+-- Tạo database mới
+CREATE DATABASE DictionaryDB;
+GO
+
+USE DictionaryDB;
+GO
+
+-- Tạo bảng từ điển Anh->Việt
+CREATE TABLE EV_Dictionary (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    English NVARCHAR(255),
+    Vietnamese NVARCHAR(MAX),
+    Example NVARCHAR(MAX)
+);
+GO
+
+-- Tạo bảng lịch sử tra cứu
+CREATE TABLE UserLog (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    QueryWord NVARCHAR(255),
+    QueryTime DATETIME DEFAULT GETDATE()
+);
+GO
+
+-- Thêm dữ liệu mẫu
+INSERT INTO EV_Dictionary (English, Vietnamese, Example) VALUES
+('apple', 'táo', 'I like eating an apple every morning.'),
+('banana', 'chuối', 'Monkeys love bananas.'),
+('cat', 'mèo', 'The cat is sleeping on the sofa.'),
+('dog', 'chó', 'My dog barks at strangers.');
+GO
