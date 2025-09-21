@@ -140,7 +140,6 @@ Hệ thống lựa chọn **TCP Socket** với mục đích:
 
 - Đảm bảo SQL Server đang chạy và port TCP 1433 mở.
 - Nếu gặp lỗi JDBC SSL: thêm `encrypt=false;trustServerCertificate=true` trong chuỗi kết nối.
-- Không commit file chứa mật khẩu thật lên GitHub.
 
 
 
