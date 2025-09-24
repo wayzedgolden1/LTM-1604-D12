@@ -1,39 +1,38 @@
--- Xóa database cũ nếu có
-IF EXISTS (SELECT * FROM sys.databases WHERE name = 'DictionaryDB')
-BEGIN
-    ALTER DATABASE DictionaryDB SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-    DROP DATABASE DictionaryDB;
-END
+-- Tạo và dùng database DictionaryDB2
+IF DB_ID('DictionaryDB2') IS NULL
+    CREATE DATABASE DictionaryDB2;
 GO
 
--- Tạo database mới
-CREATE DATABASE DictionaryDB;
+USE DictionaryDB2;
 GO
 
-USE DictionaryDB;
+-- Bảng từ điển
+IF OBJECT_ID('EV_Dictionary','U') IS NOT NULL
+    DROP TABLE EV_Dictionary;
 GO
 
--- Tạo bảng từ điển Anh->Việt
 CREATE TABLE EV_Dictionary (
-    ID INT IDENTITY(1,1) PRIMARY KEY,
-    English NVARCHAR(255),
-    Vietnamese NVARCHAR(MAX),
-    Example NVARCHAR(MAX)
+    English NVARCHAR(255) PRIMARY KEY,
+    Vietnamese NVARCHAR(MAX) NOT NULL,
+    Example NVARCHAR(MAX) NULL
 );
 GO
 
--- Tạo bảng lịch sử tra cứu
-CREATE TABLE UserLog (
-    ID INT IDENTITY(1,1) PRIMARY KEY,
-    QueryWord NVARCHAR(255),
+-- Bảng lịch sử
+IF OBJECT_ID('History','U') IS NOT NULL
+    DROP TABLE History;
+GO
+
+CREATE TABLE History (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    QueryWord NVARCHAR(255) NOT NULL,
+    ClientAddr NVARCHAR(100) NULL,
     QueryTime DATETIME DEFAULT GETDATE()
 );
 GO
 
--- Thêm dữ liệu mẫu
+-- (Tùy chọn) chèn vài bản ghi mẫu
 INSERT INTO EV_Dictionary (English, Vietnamese, Example) VALUES
-('apple', 'táo', 'I like eating an apple every morning.'),
-('banana', 'chuối', 'Monkeys love bananas.'),
-('cat', 'mèo', 'The cat is sleeping on the sofa.'),
-('dog', 'chó', 'My dog barks at strangers.');
+('hello', N'chào', N'Hello, how are you?'),
+('apple', N'táo', N'I eat an apple every day.');
 GO
