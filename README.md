@@ -105,7 +105,7 @@ Hệ thống lựa chọn **TCP Socket** với mục đích:
 2. New Query rồi copy file `setup_database.txt` vào để tạo database và bảng mẫu.
 3. Kiểm tra các bảng:
    - `EV_Dictionary` (English → Vietnamese)
-   - `UserLog` (lưu lịch sử tra cứu)
+   - `History` (lưu lịch sử tra cứu)
 4. Nếu muốn đổi tên user/password, cập nhật trong `config.properties`.
 
 ## Bước 2: Cấu hình dự án trong Eclipse
@@ -129,12 +129,6 @@ Hệ thống lựa chọn **TCP Socket** với mục đích:
 2. Run → GUI hiện ra.
 3. Nhập từ khóa → nhấn **Dịch** → kết quả hiển thị trong bảng.
 4. Lịch sử tra cứu được lưu tự động.
-
-## Bước 5: Cấu hình thêm
-
-- Đổi port server: chỉnh trong `DictionaryServer.java` và `DictionaryClient.java`.
-- Thêm từ mới / xóa từ: dùng chức năng trong GUI.
-- Nếu dùng AI API (Gemini / GPT) cần cài API key trong `config.properties`.
 
 ## Lưu ý
 
