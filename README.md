@@ -68,24 +68,24 @@ Hệ thống lựa chọn **TCP Socket** với mục đích:
    Giao diện người dùng.
 </h2>
 <p align="center">
-        <img src="docs/UI.png" alt="AIoTLab Logo" width="680"/>
+        <img src="docs/client1.png" alt="AIoTLab Logo" width="680"/>
 </p>
 <h2 align="center">
-   Giao diện dịch.
+   Giao diện bộ từ điển.
 <p align="center">
-        <img src="docs/UI2.png" alt="AIoTLab Logo" width="680"/>
+        <img src="docs/client2.png" alt="AIoTLab Logo" width="680"/>
 </p>
 <h2 align="center">
-   Giao diện lịch sủ.
+   Giao diện quản lý.
 </h2>
 <p align="center">
-        <img src="docs/UI3.png" alt="AIoTLab Logo" width="680"/>
+        <img src="docs/server1.png" alt="AIoTLab Logo" width="680"/>
 </p>
 <h2 align="center">
-   Giao diện ví dụ.
+   Giao diện lịch sử.
 </h2>
 <p align="center">
-        <img src="docs/UI4.png" alt="AIoTLab Logo" width="680"/>
+        <img src="docs/server2.png" alt="AIoTLab Logo" width="680"/>
 </p>
 
 ---
@@ -119,7 +119,7 @@ Hệ thống lựa chọn **TCP Socket** với mục đích:
 
 ## Bước 3: Chạy Server
 
-1. Mở `DictionaryServer.java`.
+1. Mở `DictionaryServerGUI.java`.
 2. Run → Server sẽ lắng nghe trên port 5000.
 3. Kiểm tra log console, đảm bảo kết nối tới DB thành công.
 
