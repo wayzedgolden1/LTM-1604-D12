@@ -33,56 +33,43 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
 
 ### ⚡ Các tính năng nổi bật.
 - **Tra cứu song ngữ:**  
-  - Hỗ trợ cả chế độ Anh→Việt.  
-  - Kết quả có thể bao gồm **nhiều nghĩa** và ghi rõ **nguồn tham khảo**.  
 
 - **Ví dụ ngữ cảnh thực tế:**  
-  - Mỗi từ vựng có thể kèm theo ví dụ câu (song ngữ nếu có).  
-  - Dữ liệu tham khảo từ **StarDict, Wiktionary, Vdict** hoặc các bộ dữ liệu phụ.  
 
 - **Lịch sử tra cứu:**  
-  - Server lưu log các truy vấn để hỗ trợ phân tích và mở rộng.  
-  - Có thể gắn **User ID** nếu cần quản lý người dùng.  
 
-
-### 🚀 Giao thức mạng
-Hệ thống lựa chọn **TCP Socket** với mục đích:
-- Đảm bảo dữ liệu chính xác (tra từ phải **đúng tuyệt đối**).  
-- Dễ lập trình với **Java Socket / ServerSocket**.  
-- Ổn định cho mô hình **Client–Server**.  
-
-### 🔗 Quy trình hoạt động
-1. Client nhập từ cần tra → gửi từ khóa đến Server qua TCP socket.  
-2. Server nhận dữ liệu → tra cứu trong cơ sở dữ liệu SQL → trả kết quả.  
-3. Client nhận và hiển thị kết quả trên GUI.  
 ---
 
 ## 🔧 2. Công nghệ sử dụng. 
-[![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/) 
-[![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+![Java](https://icons8.com/icons/set/java-logo)  
+![Swing](https://www.pngwing.com/en/search?q=java+Swing)  
+![SQL Server](https://icons8.com/icons/set/sql-server)  
+![SSMS](https://upload.wikimedia.org/wikipedia/commons/3/38/SQL_Server_Management_Studio_Logo.png)
+![TCP Socket](https://icons8.com/icons/set/tcp--c-a61c21)  
+![Eclipse IDE](https://techicons.dev/icons/eclipse)
 
 ---
 
 ## 🖼️ 3. Hình ảnh hệ thống.
 <h2 align="center">
-   Giao diện người dùng.
+   *Giao diện người dùng.*
 </h2>
 <p align="center">
         <img src="docs/client1.png" alt="AIoTLab Logo" width="680"/>
 </p>
 <h2 align="center">
-   Giao diện bộ từ điển.
+   *Giao diện bộ từ điển.*
 <p align="center">
         <img src="docs/client2.png" alt="AIoTLab Logo" width="680"/>
 </p>
 <h2 align="center">
-   Giao diện quản lý.
+   *Giao diện quản lý.*
 </h2>
 <p align="center">
         <img src="docs/server1.png" alt="AIoTLab Logo" width="680"/>
 </p>
 <h2 align="center">
-   Giao diện lịch sử.
+   *Giao diện lịch sử.*
 </h2>
 <p align="center">
         <img src="docs/server2.png" alt="AIoTLab Logo" width="680"/>
@@ -92,54 +79,38 @@ Hệ thống lựa chọn **TCP Socket** với mục đích:
 
 ## ⚙️ 4. Các bước cài đặt.
 
-## Yêu cầu hệ thống
+Yêu cầu hệ thống
 
 - Java JDK 8 trở lên
 - SQL Server 2019/2017/2016
 - Eclipse hoặc IDE Java tương thích
 - Thư viện JDBC SQL Server (`mssql-jdbc-13.2.0.jre8.jar`)
 
-## Bước 1: Thiết lập cơ sở dữ liệu
+Bước 1: Thiết lập cơ sở dữ liệu
 
 1. Mở SQL Server Management Studio (SSMS).
 2. New Query rồi copy file `setup_database.txt` vào để tạo database và bảng mẫu.
-3. Kiểm tra các bảng:
-   - `EV_Dictionary` (English → Vietnamese)
-   - `History` (lưu lịch sử tra cứu)
-4. Nếu muốn đổi tên user/password, cập nhật trong `config.properties`.
 
-## Bước 2: Cấu hình dự án trong Eclipse
+Bước 2: Cấu hình dự án trong Eclipse
 
 1. Mở Eclipse → File → Import → Existing Projects into Workspace.
-2. Chọn thư mục chứa `src/`.
-3. Thêm thư viện JDBC:
+2. Chọn thư mục chứa `src/`rồi thêm thư viện JDBC:
    - Click phải vào dự án → Build Path → Configure Build Path → Libraries → Add External JAR
    - Chọn `lib/mssql-jdbc-13.2.0.jre8.jar`.
-4. Đảm bảo `src` được build → không có lỗi.
 
-## Bước 3: Chạy Server
+Bước 3: Chạy Server và Client
 
-1. Mở `DictionaryServerGUI.java`.
+1. Chạy 2 file `DictionaryServerGUI.java` và `DictionaryClient.java`.
 2. Run → Server sẽ lắng nghe trên port 5000.
 3. Kiểm tra log console, đảm bảo kết nối tới DB thành công.
 
-## Bước 4: Chạy Client
 
-1. Mở `DictionaryClient.java`.
-2. Run → GUI hiện ra.
-3. Nhập từ khóa → nhấn **Dịch** → kết quả hiển thị trong bảng.
-4. Lịch sử tra cứu được lưu tự động.
-
-## Lưu ý
+### Lưu ý
 
 - Đảm bảo SQL Server đang chạy và port TCP 1433 mở.
 - Nếu gặp lỗi JDBC SSL: thêm `encrypt=false;trustServerCertificate=true` trong chuỗi kết nối.
 
-
-
 ---
 
 ## 📩 5. Liên hệ.
-- 👤 Họ và tên: NGUYỄN TIẾN ĐẠT.
-- 🎓 Khoa: Công nghệ Thông tin – Đại học Đại Nam.
 - 📧 Email: wayzedgolden@gmail.com
