@@ -32,11 +32,11 @@
 Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ điển **nhanh chóng, chính xác và thân thiện**, tương tự như Google Dịch nhưng gọn nhẹ hơn.
 
 ### ⚡ Các tính năng nổi bật.
-- **Tra cứu song ngữ:**  
+- **Tra cứu song ngữ.**  
 
-- **Ví dụ ngữ cảnh thực tế:**  
+- **Ví dụ ngữ cảnh thực tế.**  
 
-- **Lịch sử tra cứu:**  
+- **Lịch sử tra cứu.**  
 
 ---
 
@@ -46,19 +46,19 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
 ---
 
 ## 🖼️ 3. Hình ảnh hệ thống.
-<h2 align="center"><small><em>Giao diện người dùng</em></small></h2>
+<p align="center"><small><em>Giao diện người dùng</em></small></p>
 <p align="center">
         <img src="docs/client1.png" alt="AIoTLab Logo" width="680"/>
 </p>
-<h2 align="center"><small><em>Giao diện bộ từ điển</em></small></h2>
+<p align="center"><small><em>Giao diện bộ từ điển</em></small></p>
 <p align="center">
         <img src="docs/client2.png" alt="AIoTLab Logo" width="680"/>
 </p>
-<h2 align="center"><small><em>Giao diện quản lý</em></small></h2>
+<p align="center"><small><em>Giao diện quản lý</em></small></p>
 <p align="center">
         <img src="docs/server1.png" alt="AIoTLab Logo" width="680"/>
 </p>
-<h2 align="center"><small><em>Giao diện lịch sử</em></small></h2>
+<p align="center"><small><em>Giao diện lịch sử</em></small></p>
 <p align="center">
         <img src="docs/server2.png" alt="AIoTLab Logo" width="680"/>
 </p>
@@ -72,17 +72,17 @@ Yêu cầu hệ thống
 - Java JDK 8 trở lên.
 - SQL Server 2019/2017/2016.
 - Eclipse hoặc IDE Java tương thích.
-- Thư viện JDBC SQL Server (`mssql-jdbc-13.2.0.jre8.jar`).
+- Thư viện JDBC SQL Server.
 
 Bước 1: Thiết lập cơ sở dữ liệu
 
 1. Mở SQL Server Management Studio (SSMS).
-2. New Query rồi copy file `setup_database.txt` vào để tạo database và bảng mẫu.
+2. New Query rồi copy file setup_database vào để tạo database và bảng mẫu.
 
 Bước 2: Cấu hình dự án trong Eclipse
 
 1. Mở Eclipse → File → Import → Existing Projects into Workspace.
-2. Chọn thư mục chứa `src/`rồi thêm thư viện JDBC:
+2. Chọn thư mục src rồi thêm thư viện JDBC:
    - Click phải vào dự án → Build Path → Configure Build Path → Libraries → Add External JAR.
    - Chọn `lib/mssql-jdbc-13.2.0.jre8.jar`.
 
