@@ -104,12 +104,6 @@ Bước 3: Chạy Server và Client
 2. Run → Server sẽ lắng nghe trên port 5000.
 3. Kiểm tra log console, đảm bảo kết nối tới DB thành công.
 
-
-### Lưu ý
-
-- Đảm bảo SQL Server đang chạy và port TCP 1433 mở.
-- Nếu gặp lỗi JDBC SSL: thêm `encrypt=false;trustServerCertificate=true` trong chuỗi kết nối.
-
 ---
 
 ## 📩 5. Liên hệ.
