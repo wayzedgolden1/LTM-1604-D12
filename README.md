@@ -63,35 +63,35 @@ Mục tiêu của hệ thống là mang lại trải nghiệm tra cứu từ đi
                                 <img src="docs/server2.png" alt="AIoTLab Logo" width="680"/>
                                 </p>
 
-                                ---
+---
+## ⚙️ 4. Các bước cài đặt.
 
-                                ## ⚙️ 4. Các bước cài đặt.
+Yêu cầu hệ thống
 
-                                Yêu cầu hệ thống
+- Java JDK 8 trở lên.
+- SQL Server 2019/2017/2016.
+- Eclipse hoặc IDE Java tương thích.
+- Thư viện JDBC SQL Server.
 
-                                - Java JDK 8 trở lên.
-                                - SQL Server 2019/2017/2016.
-                                - Eclipse hoặc IDE Java tương thích.
-                                - Thư viện JDBC SQL Server.
+Bước 1: Thiết lập cơ sở dữ liệu
 
-                                Bước 1: Thiết lập cơ sở dữ liệu
+1. Mở SQL Server Management Studio (SSMS).
+2. New Query rồi copy file setup_database vào để tạo database và bảng mẫu.
 
-                                1. Mở SQL Server Management Studio (SSMS).
-                                2. New Query rồi copy file setup_database vào để tạo database và bảng mẫu.
+Bước 2: Cấu hình dự án trong Eclipse
 
-                                Bước 2: Cấu hình dự án trong Eclipse
+1. Mở Eclipse → File → Import → Existing Projects into Workspace.
+2. Chọn thư mục src rồi thêm thư viện JDBC:
+- Click phải vào dự án → Build Path → Configure Build Path → Libraries → Add External JAR.
+- Chọn `lib/mssql-jdbc-13.2.0.jre8.jar`.
 
-                                1. Mở Eclipse → File → Import → Existing Projects into Workspace.
-                                2. Chọn thư mục src rồi thêm thư viện JDBC:
-                                   - Click phải vào dự án → Build Path → Configure Build Path → Libraries → Add External JAR.
-                                      - Chọn `lib/mssql-jdbc-13.2.0.jre8.jar`.
+Bước 3: Chạy Server và Client
 
-                                      Bước 3: Chạy Server và Client
+1. Chạy lần lượt 2 file `DictionaryServerGUI.java` và `DictionaryClient.java`.
+2. Kiểm tra log console, đảm bảo kết nối tới DB thành công.
 
-                                      1. Chạy lần lượt 2 file `DictionaryServerGUI.java` và `DictionaryClient.java`.
-                                      2. Kiểm tra log console, đảm bảo kết nối tới DB thành công.
+---
 
-                                      ---
-
-                                      ## 📩 5. Liên hệ.
-                                      - 📧 Email: wayzedgolden@gmail.com
+## 📩 5. Liên hệ.
+- 📧 Email: wayzedgolden@gmail.com
+                                
